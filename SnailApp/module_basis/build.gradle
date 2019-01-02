@@ -1,0 +1,7 @@
+apply from: "$rootDir$GradleModule"
+
+static def getPackageName() {
+    return "snailx.module_basis"
+}
+
+android moduleProperty(project.getName(), getPackageName())

@@ -1,0 +1,79 @@
+ext {
+    moduleProperty = this.&moduleProperty
+    library = this.&library
+    application = this.&application
+}
+
+def getDefaultConfig(String moduleName, String packageName) {
+    return {
+        if (!packageName?.isEmpty()) {
+            applicationId "${packageName}"
+        }
+        minSdkVersion project.SDK_MIN_VERSION as int
+        targetSdkVersion project.SDK_TARGET_VERSION as int
+        versionCode project.APP_VERSION_CODE as int
+        versionName "${project.APP_VERSION_NAME}"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        if (!moduleName?.isEmpty()) {
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments = [moduleName: moduleName]
+                }
+            }
+        }
+    }
+}
+
+def commonProperty() {
+    return {
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+def application(String packageName) {
+    return {
+        compileSdkVersion project.SDK_COMPLILE_VERSION as int
+        defaultConfig getDefaultConfig("", packageName)
+        commonProperty()
+    }
+}
+
+def moduleProperty(String moduleName, String packageName) {
+    return {
+        compileSdkVersion project.SDK_COMPLILE_VERSION as int
+        defaultConfig getDefaultConfig(moduleName, packageName)
+        commonProperty()
+        sourceSets {
+            main {
+                if (isModule.toBoolean()) {
+                    manifest.srcFile 'src/main/module/AndroidManifest.xml'
+                } else {
+                    manifest.srcFile 'src/main/AndroidManifest.xml'
+                    //集成开发模式下排除debug文件夹中的所有Java文件
+                    java {
+                        exclude 'debug/**'
+                    }
+                }
+            }
+        }
+    }
+}
+
+def library() {
+    return {
+        compileSdkVersion project.SDK_COMPLILE_VERSION as int
+        defaultConfig getDefaultConfig("", "")
+        commonProperty()
+    }
+}

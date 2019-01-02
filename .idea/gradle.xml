@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/SnailApp" />
+            <option value="$PROJECT_DIR$/SnailApp/app" />
+            <option value="$PROJECT_DIR$/SnailApp/main" />
+            <option value="$PROJECT_DIR$/SnailApp/module_basis" />
+            <option value="$PROJECT_DIR$/SnailApp/module_new" />
+            <option value="$PROJECT_DIR$/SnailLibs" />
+            <option value="$PROJECT_DIR$/SnailLibs/common" />
+            <option value="$PROJECT_DIR$/SnailLibs/ui" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

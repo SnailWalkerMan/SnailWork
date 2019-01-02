@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: "$rootDir$GradleAndroid"
+apply from:"$rootDir$GradleDependency"
+//这里使用下面两中方法进行配置
+//apply from: "${rootDir}/snailGradle/android.gradle"//method 1
+//apply from: "$rootDir$GradleAndroid"//method 2
+//apply from:"$rootDir$GradleDependency"
+
+android library()
+
+dependencies {
+    dependencyLibAndTest()
+}

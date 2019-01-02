@@ -1,0 +1,12 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply from: "$rootDir$GradleAndroid"
+apply from: "$rootDir$GradleDependency"
+
+dependencies {
+    commonAnnotation()
+    implementation project(':SnailLibs:common')
+}

@@ -1,0 +1,2 @@
+include ':SnailApp:app',  ':SnailApp:main',':SnailApp:module_basis', ':SnailApp:module_new',
+        ':SnailLibs:common', ':SnailLibs:ui'

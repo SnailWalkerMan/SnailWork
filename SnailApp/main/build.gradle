@@ -1,0 +1,19 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply from: "$rootDir$GradleAndroid"
+apply from: "$rootDir$GradleDependency"
+
+static def getPackageName() {
+    return "snailx.shell"
+}
+
+android moduleProperty(project.getName(), getPackageName())
+
+dependencies commonAnnotation()
+
+dependencies {
+    implementation project(':SnailLibs:common')
+}

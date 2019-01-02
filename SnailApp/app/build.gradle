@@ -1,0 +1,19 @@
+apply plugin: 'com.android.application'
+apply from: "$rootDir$GradleAndroid"
+apply from: "$rootDir$GradleDependency"
+
+static def getPackageName() {
+    return "snailx.app"
+}
+
+android application(getPackageName())
+
+dependencies commonAnnotation()
+
+dependencies {
+    dependencyLibAndTest()
+    implementation project(':SnailLibs:common')
+    if (!isModule.toBoolean()) {
+        implementation project(':SnailLibs:module_basis')
+    }
+}

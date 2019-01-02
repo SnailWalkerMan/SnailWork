@@ -1,0 +1,36 @@
+
+ext {
+    dependencyLibAndTest = this.&dependencyLibAndTest
+    commonApiDependency = this.&commonApiDependency
+    commonAnnotation = this.&commonAnnotation
+}
+
+def test() {
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.runner
+    androidTestImplementation deps.test.espresso_core
+}
+//lib包依赖 以及 test包依赖
+def dependencyLibAndTest() {
+    return {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+        test()
+    }
+}
+//放在common包下面的依赖,可通过依赖关系传递下去
+def commonApiDependency() {
+    return {
+        api deps.support.appcompat
+        api deps.support.constraint_layout
+    }
+}
+
+def commonAnnotation(){
+    return{
+        annotationProcessor deps.ali.arouter_compiler
+    }
+}
+
+
+
