@@ -8,5 +8,7 @@ dependencies commonApiDependency()
 
 dependencies {
     dependencyLibAndTest()
+    implementation deps.support.multidex
+    implementation project(':SnailLibs:ui')
     api deps.ali.arouter_api
 }

@@ -24,4 +24,5 @@ public class SnailApplication extends CommonApplication {
 
         ARouter.init(this);
     }
+
 }

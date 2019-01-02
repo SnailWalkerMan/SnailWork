@@ -14,6 +14,8 @@ dependencies {
     dependencyLibAndTest()
     implementation project(':SnailLibs:common')
     if (!isModule.toBoolean()) {
-        implementation project(':SnailLibs:module_basis')
+        implementation project(':SnailApp:main')
+        implementation project(':SnailApp:module_basis')
+        implementation project(':SnailApp:module_new')
     }
 }

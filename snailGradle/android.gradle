@@ -13,7 +13,7 @@ def getDefaultConfig(String moduleName, String packageName) {
         targetSdkVersion project.SDK_TARGET_VERSION as int
         versionCode project.APP_VERSION_CODE as int
         versionName "${project.APP_VERSION_NAME}"
-
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         if (!moduleName?.isEmpty()) {
             javaCompileOptions {

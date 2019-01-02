@@ -6,7 +6,7 @@ public class BasisActivity extends CommonActivity {
 
     @Override
     protected int getLayoutRes() {
-        return R.layout.activity_main;
+        return R.layout.activity_basis;
     }
 
     @Override

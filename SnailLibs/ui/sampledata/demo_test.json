@@ -1,0 +1,30 @@
+//模拟的数据
+{
+  "user_info": [
+    {
+      "name": "Amy",
+      "sex": 0,
+      "age": 65
+    },
+    {
+      "name": "Bob",
+      "sex": 1,
+      "age": 66
+    },
+    {
+      "name": "Cue",
+      "sex": 0,
+      "age": 67
+    }
+  ],
+  "text_icon": [
+    {
+      "name": "Cloud 1",
+      "icon": "@drawable/R.drawable.ic_cloud_white_24dp"
+    },
+    {
+      "name": "Cloud 2",
+      "icon": "@drawable/R.drawable.ic_cloud_white_24dp"
+    }
+  ]
+}

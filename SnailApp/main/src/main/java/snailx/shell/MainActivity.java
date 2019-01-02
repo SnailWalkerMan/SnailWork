@@ -11,7 +11,7 @@ import snailx.common.ui.CommonActivity;
 public class MainActivity  extends CommonActivity {
     @Override
     protected int getLayoutRes() {
-        return 0;
+        return R.layout.activity_main;
     }
 
     @Override
