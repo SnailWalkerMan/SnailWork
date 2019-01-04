@@ -11,5 +11,6 @@ dependencies {
     implementation deps.support.multidex
     implementation project(':SnailLibs:ui')
     api deps.support.recyclerview_v7
+    //test
     api deps.ali.arouter_api
 }
