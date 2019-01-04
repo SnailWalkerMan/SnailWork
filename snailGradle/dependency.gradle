@@ -6,8 +6,8 @@ ext {
 }
 
 def test() {
-    testImplementation deps.test.junit
     androidTestImplementation deps.test.runner
+//    androidTestCompile "org.mockito:mockito-android:+"
     androidTestImplementation deps.test.espresso_core
 }
 //lib包依赖 以及 test包依赖
