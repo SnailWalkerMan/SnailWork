@@ -21,5 +21,6 @@ public class CommonApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+        //wo ye lai shi shi
     }
 }
