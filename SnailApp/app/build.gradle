@@ -9,9 +9,9 @@ static def getPackageName() {
 android application(getPackageName())
 
 dependencies commonAnnotation()
+dependencies dependencyLibAndTestMethod()
 
 dependencies {
-    dependencyLibAndTest()
     implementation project(':SnailLibs:common')
     if (!isModule.toBoolean()) {
         implementation project(':SnailApp:main')

@@ -7,7 +7,8 @@ android library()
 //dependencies dependencyLibAndTest()
 
 dependencies {
-    dependencyLibAndTest()
+
+    dependencyLibAndTestMethod()
     implementation deps.support.appcompat
 
 }

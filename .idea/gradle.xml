@@ -3,6 +3,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT" />
+        </compositeConfiguration>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -16,6 +19,7 @@
             <option value="$PROJECT_DIR$/SnailLibs" />
             <option value="$PROJECT_DIR$/SnailLibs/common" />
             <option value="$PROJECT_DIR$/SnailLibs/ui" />
+            <option value="$PROJECT_DIR$/javaLibs" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,2 +1,2 @@
-include ':SnailApp:app',  ':SnailApp:main',':SnailApp:module_basis', ':SnailApp:module_new',
+include ':SnailApp:app', ':SnailApp:main', ':SnailApp:module_basis', ':SnailApp:module_new', ':javaLibs',
         ':SnailLibs:common', ':SnailLibs:ui'

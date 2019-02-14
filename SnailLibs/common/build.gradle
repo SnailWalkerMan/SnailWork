@@ -7,10 +7,14 @@ android library()
 dependencies commonApiDependency()
 
 dependencies {
-    dependencyLibAndTest()
+    apply from: "$rootDir$GradleDependency"
+    dependencyLibAndTestMethod()
     implementation deps.support.multidex
     implementation project(':SnailLibs:ui')
     api deps.support.recyclerview_v7
 
     api deps.ali.arouter_api //i will do it success
+
+    api deps.pic.glide
+    api deps.pic.glide_compiler
 }

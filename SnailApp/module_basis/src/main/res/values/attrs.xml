@@ -1,0 +1,9 @@
+<resources>
+    <declare-styleable name="SwipeDeleteItem">
+        <attr name="SwipeFrom" >
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+</resources>

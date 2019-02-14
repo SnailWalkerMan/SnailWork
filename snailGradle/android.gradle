@@ -25,9 +25,9 @@ def getDefaultConfig(String moduleName, String packageName) {
     }
 }
 
+
 def commonProperty() {
     return {
-
         buildTypes {
             release {
                 minifyEnabled false

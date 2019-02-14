@@ -6,7 +6,9 @@ if (isModule.toBoolean()) {
 apply from: "$rootDir$GradleAndroid"
 apply from: "$rootDir$GradleDependency"
 
+dependencies commonAnnotation()
+dependencies dependencyLibAndTestMethod()
+
 dependencies {
-    commonAnnotation()
     implementation project(':SnailLibs:common')
 }
